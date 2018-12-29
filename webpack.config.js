@@ -4,12 +4,14 @@ module.exports = {
   output:{
     path: `${__dirname}/dist`, // 出力先
     filename: "main.js",
+    publicPath: '/',
   },
   mode: "development",
   /* mode: "production", */
   devServer:{
     contentBase: "./dist",
-    port: "3000"
+    port: "3000",
+    historyApiFallback: true,
   },
   module:{
     rules:[

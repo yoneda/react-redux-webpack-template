@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
+import { Link } from "react-router-dom";
 import Buttons from "../components/Buttons.js";
 import Display from "../components/Display.js";
 import EmotionTest from "../components/EmotionTest.js";
@@ -9,6 +10,7 @@ const CountContainer = ({ count, addCountHandler, subCountHandler, resetCountHan
 
   return(
     <div>
+      <Link to="/about">about</Link>
       <Display count={count} />
       <Buttons addCountHandler={addCountHandler} subCountHandler={subCountHandler} resetCountHandler={resetCountHandler}/>
       <EmotionTest />
